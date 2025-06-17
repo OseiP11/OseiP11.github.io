@@ -33,6 +33,7 @@
 	<div class="box">?</div>
 
 	<script>
+		(function () {
 			'use strict'
 			/* global jQuery */
 
@@ -65,7 +66,8 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
-			
+			var positionX = 0
+			var points
 
 
 			/* 
@@ -75,7 +77,7 @@
 			*/
 			function update() {
 				positionX = positionX + 10
-				moveBoxTo(500); // Moves box to x position 300
+				moveBoxTo(positionX); // Moves box to positionX
 			
 
 
@@ -87,6 +89,8 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0
+				changeBoxText(0)
 
 
 			};
